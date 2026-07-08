@@ -9,6 +9,7 @@ Mere C Programming ke practice projects
 4. **Evenodd.c** - Input 5 numbers and count Even and Odd
 5. **Grade.c** - Marks se Grade A/B/C/D/F nikalna
 6. **maxmin.c** - 3 number me sabse bada aur chota nikalna
+7. **pattern.c** - * se triangle banana using nested loop
 ## Tech Stack
 - Language: C
 - Tools: Cxxdroid, GitHub
