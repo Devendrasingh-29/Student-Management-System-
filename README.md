@@ -10,6 +10,7 @@ Mere C Programming ke practice projects
 5. **Grade.c** - Marks se Grade A/B/C/D/F nikalna
 6. **maxmin.c** - 3 number me sabse bada aur chota nikalna
 7. **pattern.c** - * se triangle banana using nested loop
+8. **ultapattern.c** - Ulta triangle banana using nested loop
 ## Tech Stack
 - Language: C
 - Tools: Cxxdroid, GitHub
