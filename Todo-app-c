@@ -1,0 +1,72 @@
+#include <stdio.h>
+#include <string.h>
+
+#define MAX_TASKS 10
+#define MAX_LENGTH 100
+
+char tasks[MAX_TASKS][MAX_LENGTH];
+int task_count = 0;
+
+void addTask() {
+    if (task_count < MAX_TASKS) {
+        printf("Task likho: ");
+        getchar();
+        fgets(tasks[task_count], MAX_LENGTH, stdin);
+        tasks[task_count][strcspn(tasks[task_count], "\n")] = 0;
+        task_count++;
+        printf("Task add ho gaya! ✅\n");
+    } else {
+        printf("List full hai bhai! 10 se zyada task nahi add kar sakte\n");
+    }
+}
+
+void showTasks() {
+    if (task_count == 0) {
+        printf("Abhi koi task nahi hai\n");
+    } else {
+        printf("\n--- TERE TASKS ---\n");
+        for (int i = 0; i < task_count; i++) {
+            printf("%d. %s\n", i + 1, tasks[i]);
+        }
+    }
+}
+
+void deleteTask() {
+    int num;
+    showTasks();
+    if (task_count > 0) {
+        printf("Kaunsa task delete karna hai? Number batao: ");
+        scanf("%d", &num);
+        if (num >= 1 && num <= task_count) {
+            for (int i = num - 1; i < task_count - 1; i++) {
+                strcpy(tasks[i], tasks[i + 1]);
+            }
+            task_count--;
+            printf("Task delete ho gaya! ❌\n");
+        } else {
+            printf("Galat number dala\n");
+        }
+    }
+}
+
+int main() {
+    int choice;
+    while (1) {
+        printf("\n===== TO-DO LIST APP =====\n");
+        printf("1. Task Add karo\n");
+        printf("2. Saare Tasks dikhao\n");
+        printf("3. Task Delete karo\n");
+        printf("4. Exit\n");
+        printf("Apna choice batao: ");
+        scanf("%d", &choice);
+
+        switch (choice) {
+            case 1: addTask(); break;
+            case 2: showTasks(); break;
+            case 3: deleteTask(); break;
+            case 4: printf("Bye Bhai! 👋\n"); return 0;
+            default: printf("Galat choice hai\n");
+        }
+    }
+    return 0;
+}
