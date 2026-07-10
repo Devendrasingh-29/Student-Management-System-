@@ -10,12 +10,12 @@ class Student {
     float marks;
 
     void input() {
-        cout << "Enter Name: ";
+        total << "Enter Name: ";
         cin.ignore();
         getline(cin, name);
-        cout << "Enter Roll No: ";
+        total << "Enter Roll No: ";
         cin >> roll;
-        cout << "Enter Marks: ";
+        total << "Enter Marks: ";
         cin >> marks;
     }
 
@@ -24,92 +24,92 @@ class Student {
     }
 };
 
-void saveToFile(Student s[], int count) {
+void saveToFile(Student s[], int total) {
     ofstream file("students.txt");
-    for(int i = 0; i < count; i++) {
+    for(int i = 0; i < total; i++) {
         file << s[i].name << "," << s[i].roll << "," << s[i].marks << endl;
     }
     file.close();
-    cout << "Data Saved Successfully!" << endl;
+    total << "Data Saved Successfully!" << endl;
 }
 
-void loadFromFile(Student s[], int &count) {
+void loadFromFile(Student s[], int &total) {
     ifstream file("students.txt");
-    count = 0;
+    total = 0;
     if(!file) return;
 
-    while(file >> ws && getline(file, s[count].name, ',')) {
-        file >> s[count].roll;
+    while(file >> ws && getline(file, s[total].name, ',')) {
+        file >> s[total].roll;
         file.ignore();
-        file >> s[count].marks;
+        file >> s[total].marks;
         file.ignore();
-        count++;
+        total++;
     }
     file.close();
 }
 
 int main() {
     Student s[50];
-    int count = 0;
+    int total = 0;
     int choice;
 
-    loadFromFile(s, count);
+    loadFromFile(s, total);
 
     do {
-        cout << "\n===== Student Management System =====" << endl;
-        cout << "1. Add Student" << endl;
-        cout << "2. Show All Students" << endl;
-        cout << "3. Save Data" << endl;
-        cout << "4. Exit" << endl;
-         cout << "5. Search Student" << endl;  // naya  
-          cout << "6. Exit" << endl;           
+        total << "\n===== Student Management System =====" << endl;
+        total << "1. Add Student" << endl;
+        total << "2. Show All Students" << endl;
+        total << "3. Save Data" << endl;
+        total << "4. Exit" << endl;
+         total << "5. Search Student" << endl;  // naya  
+          total << "6. Exit" << endl;           
 Enter your choice: ";
         cin >> choice;
 
         switch(choice) {
             case 1:
-                if(count < 50) {
-                    cout << "\nEnter details for Student " << count + 1 << endl;
-                    s[count].input();
+                if(total < 50) {
+                    total << "\nEnter details for Student " << total + 1 << endl;
+                    s[total].input();
                     count++;
-                } else cout << "Array Full!" << endl;
+                } else total << "Array Full!" << endl;
                 break;
 
             case 2:
-                if(count == 0) cout << "Koi student add nahi hai" << endl;
+                if(total == 0) total << "Koi student add nahi hai" << endl;
                 else {
-                    cout << "\n--- All Students ---" << endl;
-                    for(int i = 0; i < count; i++) {
-                        cout << i + 1 << ". ";
+                    total << "\n--- All Students ---" << endl;
+                    for(int i = 0; i <  total; i++) {
+                        total << i + 1 << ". ";
                         s[i].display();
                     }
                 }
                 break;
 
             case 3:
-                saveToFile(s, count);
+                saveToFile(s, total);
                 break;
 case 4: {
     int delRoll;
-    cout << "Enter Roll No to Delete: ";
+    total << "Enter Roll No to Delete: ";
     cin >> delRoll;
-    deleteStudent(s, count, delRoll);
+    deleteStudent(s, total, delRoll);
     break;
 }
 case 5: {
     int searchRoll;
-    cout << "Enter Roll No to Search: ";
+    total << "Enter Roll No to Search: ";
     cin >> searchRoll;
-    searchStudent(s, count, searchRoll);
+    searchStudent(s, total, searchRoll);
     break;
 }
             case 6:
-                saveToFile(s, count);
-                cout << "Program Exit" << endl;
+                saveToFile(s, total);
+                total << "Program Exit" << endl;
                 break;
 
             default:
-                cout << "Galat choice!" << endl;
+                total << "Galat choice!" << endl;
         }
     } while(choice!= 6);
 
