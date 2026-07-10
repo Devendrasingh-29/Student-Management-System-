@@ -8,11 +8,11 @@ Mere C Programming ke practice projects
 3. **guessgame.c** - Number guessing game 1 to 100 with hints
 4. **Evenodd.c** - Input 5 numbers and count Even and Odd
 5. **Grade.c** - Marks se Grade A/B/C/D/F nikalna
-6. **maxmin.c** - 3 number me sabse bada aur chota nikalna
-7. **pattern.c** - * se triangle banana using nested loop
-8. **ultapattern.c** - Ulta triangle banana using nested loop
+6. Index.html - Calculator Web App using HTML + CSS + JavaScript
+7. **maxmin.c** - 3 number me sabse bada aur chota nikalna
+8. **pattern.c** - * se triangle banana using nested loop
+9. **ultapattern.c** - Ulta triangle banana using nested loop
 ## Tech Stack
-- Language: C
+- Language: C, C++, HTML, CSS, JavaScript
 - Tools: Cxxdroid, GitHub
-
 Made with ❤️ by Devendrasingh-29
