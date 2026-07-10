@@ -12,8 +12,16 @@ Mere C Programming ke practice projects
 7. **maxmin.c** - 3 number me sabse bada aur chota nikalna
 8. **pattern.c** - * se triangle banana using nested loop
 9. **ultapattern.c** - Ulta triangle banana using nested loop
-## Tech Stack
-- Language: C, C++, HTML, CSS, JavaScript
-- Tools: Cxxdroid, GitHub
-- 
-Made with ❤️ by Devendrasingh-29
+
+   ## **Tech Stack**
+- **Language**: C, C++, HTML, CSS, JavaScript
+- **Tools**: Cxxdroid, GitHub
+
+## **GitHub Stats**
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=Devendrasingh-29&show_icons=true&theme=radical)
+
+## **Connect With Me** 🤝
+- **GitHub**: [@Devendrasingh-29](https://github.com/Devendrasingh-29)
+- **Email**: devendrapratapsingh2904@gmail.com
+- **Made with ❤️ by Devendrasingh-29**
+  
